@@ -14,16 +14,24 @@ public void setup()
     }
   }
 }
-public boolean palindrome(String word)
+public boolean palindrome(String barack)
 {
-  //your code here
-  return false;
+  String word = "";
+  for(int i=0; i<barack.length(); i++){
+    char raul = barack.charAt(i); 
+    if(Character.isLetter(raul)){
+      word += barack.substring(i, i+1);
+    }
+  }
+word = word.toLowerCase();
+  int x = 0;
+  for(int i=0; i<word.length()/2; i++){
+    if(word.charAt(i) == word.charAt(word.length()-i-1)){
+      x++;
+    }
+  }
+  if(x == word.length()/2){
+    return true;
+  }else return false;
 }
-public String reverse(String str)
-{
-    String sNew = new String();
-    //your code here
-    return sNew;
-}
-
 
